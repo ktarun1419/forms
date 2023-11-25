@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Textarea from './components/Textarea';
+import Form from './components/Form';
+import { useState } from 'react';
 
 function App() {
+  const [json,setJson]=useState('')
+  const handleJsonChange=(value)=>{
+    // console.log(value)
+    try {
+      let JsonString=JSON.parse(value)
+      console.log(typeof(JsonString))
+      setJson(JsonString)
+    } catch (error) {
+      alert("Please add a valid json")
+    }
+   
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {console.log(json)}
+      <Textarea json={json} setJson={handleJsonChange} />
+      <Form json={json} />
+     
     </div>
   );
 }

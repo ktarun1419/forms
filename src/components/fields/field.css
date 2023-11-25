@@ -1,0 +1,30 @@
+.field{
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid grey;
+    /* background-color: aliceblue; */
+    min-height: 36px;
+    border-radius: 8px;
+    height: auto;
+}
+.required{
+    color: red;
+}
+.group{
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.info_tooltip{
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    border-radius: 50%;
+    /* padding: 5px; */
+}
