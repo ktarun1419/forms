@@ -19,8 +19,7 @@ const Form = ({json}) => {
             }else{
                 if (!Boolean(element?.value)) {
                     if (element?.validate?.required) {
-                        alert("Please fill required fields")
-                        // return false
+                       //required alerts here
                     }
                    delete newObj[index]
                 }
@@ -31,6 +30,7 @@ const Form = ({json}) => {
    const handleSubmit=()=>{
     let submitData=filterData(updatedData)
     console.log({submitData})
+    alert("Data submitted ! Successfully")
     // axios.post('')
 
    }
