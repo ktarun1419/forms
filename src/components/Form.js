@@ -19,7 +19,7 @@ const Form = ({json}) => {
             }else{
                 if (!Boolean(element?.value)) {
                     if (element?.validate?.required) {
-                       //required alerts here
+                       //required alerts and conditions here changes
                     }
                    delete newObj[index]
                 }
